@@ -76,12 +76,12 @@ You can pass the an object ```config``` as parameter when call [```from()```](#a
 const customConfig = {
   current: 'agora',
   past: {
-    day: { singular: 'dia atrás', plural: 'dias atrás' },
-    minute: { singular: 'minuto atrás', plural: 'minutos atrás' },
-    hour: { singular: 'hora atrás', plural: 'horas atrás' },
-    month: { singular: 'mês atrás', plural: 'meses atrás' },
-    second: "segundos atrás", //You can use a string directly.
-    year: { singular: 'ano atrás', plural: 'anos atrás' }
+    day: { singular: '%d dia atrás', plural: '%d dias atrás' },
+    minute: { singular: '%d minuto atrás', plural: '%d minutos atrás' },
+    hour: { singular: '%d hora atrás', plural: '%d horas atrás' },
+    month: { singular: '%d mês atrás', plural: '%d meses atrás' },
+    second: "%d segundos atrás", //You can use a string directly.
+    year: { singular: '%d ano atrás', plural: '%d anos atrás' }
   },
 }
 const formattedString = timean.from(date1, date2, customConfig);
@@ -97,9 +97,12 @@ const formattedString = timeFormatter.from(date1, date2);
 
 *Note: all fields are optional, when you overwrite a field just it will be merged with default configuration.*
 
+### Customizing (Replacer)
+By default, Timean.js replaces ```"%d"``` by the calculated time difference result. You can edit the replacer combination passing a property ```replacer: any_string_or_regex_you_want``` in the ```config``` object.
+
 ## API
 
-Timean has a cleaning and powerful API, it allows you to generate formatted time strings easily.
+Timean has a clean and powerful API, it allows you to generate formatted time strings easily.
 
 ```ts
 create(config?: LocaleConfig)
