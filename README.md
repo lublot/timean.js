@@ -46,22 +46,22 @@ npm install --save timean
 
 To start to use this package you need to import it:
 
-```
+```js
 import timean from "timean"; //ES6 import
 ```
 or
-```
+```js
 const timean = require("timean"); //CommonJS
 ```
 
 Now you can call use the appropriated method:
 
-```
+```js
 const date = new Date('2021-01-01');
 const formattedString = timean.fromNow(date);
 ```
 
-```
+```js
 const date1 = new Date('2021-01-01');
 const date2 = new Date('2021-01-02');
 const formattedString = timean.from(date1, date2);
@@ -70,7 +70,7 @@ const formattedString = timean.from(date1, date2);
 ### Customizing (Locale)
 You can pass the an object ```config``` as parameter when call [```from()```](#api) or [```fromNow()```](#api), like this:
 
-```
+```js
 //...
 // See the config options below on this docs.
 const customConfig = {
@@ -89,7 +89,7 @@ const formattedString = timean.from(date1, date2, customConfig);
 
 If you want to define a default configuration and avoid to pass a ```config``` parameter on each call of [```from(...)```](#api) or [```fromNow(...)```](#api), you can create a instance of *Timean* using:
 
-```
+```js
 const timeFormatter = timean.create({ ...config })
 ```
 
@@ -99,17 +99,17 @@ const timeFormatter = timean.create({ ...config })
 
 Timean has a cleaning and powerful API, it allows you to generate formatted time strings easily.
 
-```
+```js
 from(initialDate: Date, finalDate: Date, config?: LocaleConfig)
 ```
-```
+```js
 fromNow(date: Date, config?: LocaleConfig)
 ```
 ### Types
-```
+```js
 type StringWithPlural = { singular: string; plural: string; }
 ```
-```
+```js
 type LocaleConfig = {
   current: string,
   replacer: string,

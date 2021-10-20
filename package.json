@@ -10,7 +10,8 @@
   "keywords": [
     "date",
     "string",
-    "formatter"
+    "formatter",
+    "time"
   ],
   "scripts": {
     "build": "npx webpack"
