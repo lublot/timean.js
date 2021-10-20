@@ -106,10 +106,10 @@ from(initialDate: Date, finalDate: Date, config?: LocaleConfig)
 fromNow(date: Date, config?: LocaleConfig)
 ```
 ### Types
-```js
+```ts
 type StringWithPlural = { singular: string; plural: string; }
 ```
-```js
+```ts
 type LocaleConfig = {
   current: string,
   replacer: string,
