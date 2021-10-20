@@ -1,0 +1,41 @@
+{
+  "name": "timean",
+  "version": "1.0.0",
+  "main": "./index.js",
+  "types": "./lib",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.4.4"
+  },
+  "keywords": [
+    "date",
+    "string",
+    "formatter"
+  ],
+  "scripts": {
+    "build": "npx webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lublot/timean.js"
+  },
+  "bugs": {
+    "url": "https://github.com/lublot/timean.js/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/jest": "^27.0.2",
+    "babel-jest": "^27.3.0",
+    "date-fns": "^2.25.0",
+    "jest": "^27.3.0",
+    "ts-loader": "^9.2.6",
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.0"
+  },
+  "author": {
+    "name": "Emerson Souza",
+    "url": "https://github.com/lublot"
+  }
+}
