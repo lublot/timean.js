@@ -90,7 +90,9 @@ const formattedString = timean.from(date1, date2, customConfig);
 If you want to define a default configuration and avoid to pass a ```config``` parameter on each call of [```from(...)```](#api) or [```fromNow(...)```](#api), you can create a instance of *Timean* using:
 
 ```js
-const timeFormatter = timean.create({ ...config })
+//...
+const timeFormatter = timean.create({ ...config });
+const formattedString = timeFormatter.from(date1, date2);
 ```
 
 *Note: all fields are optional, when you overwrite a field just it will be merged with default configuration.*
@@ -99,10 +101,14 @@ const timeFormatter = timean.create({ ...config })
 
 Timean has a cleaning and powerful API, it allows you to generate formatted time strings easily.
 
-```js
+```ts
+create(config?: LocaleConfig)
+```
+
+```ts
 from(initialDate: Date, finalDate: Date, config?: LocaleConfig)
 ```
-```js
+```ts
 fromNow(date: Date, config?: LocaleConfig)
 ```
 ### Types
